@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;700&display=swap');
+:root {
+  font-size: 62.5%;
+  /* colors */
+  --brown: #522C25;
+  --green: #75D7B1;
+  --pink: #F69CB8;
+  --pink-lt: #FFC1D5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+} 
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  border: red .1rem solid;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Kantumruy Pro', sans-serif;
+}
