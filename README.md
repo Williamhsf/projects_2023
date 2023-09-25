@@ -4,4 +4,4 @@ Este ano de 2023, estou animado para empreender uma série de projetos que busca
 Aqui planejo destacar alguns prjetos que estou aprendendo e desenvolvendo ao longo deste ano
 
 
- <a href="./mary-cakes/index.html">Visit Mary Cakes</a> 
+ <a href="https://williamhsf.github.io/projects_2023/mary-cakes/index.html">Visit Mary Cakes</a> 
