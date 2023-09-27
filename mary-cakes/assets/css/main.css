@@ -16,6 +16,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  font-size: 1.6rem;
+  font-family: 'Kantumruy Pro', sans-serif;
+  min-height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -25,13 +31,189 @@ ul {
   list-style-type: none;
 } 
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  font-size: 1.4rem;
+  font-family: 'Kantumruy Pro', sans-serif;  
+}
+
+.btn {
+  background-color: var(--brown);
+  color: #FFF;
+  padding: .5rem 1.6rem;
+  border-radius: 999rem;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+/* fim general */
+
+/* container */
 .container {
   width: 100%;
-  max-width: 120rem;
+  max-width: 140rem;
   margin: 0 auto;
-  border: red .1rem solid;
+  /* border: red .1rem solid; */
 }
-body {
-  font-size: 1.6rem;
-  font-family: 'Kantumruy Pro', sans-serif;
+
+/* header */
+header {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 4rem;
+  height: 10rem;
+  position: relative;
+}
+
+.logo a img {
+  width: 24rem;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.menu-header li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FFF;
+  line-height: 39.75px;
+}
+
+.button-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.social-media span {
+  background-color: var(--brown);
+  width: 3rem;
+  height: 3rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+}
+
+.social-media i {
+  color: #FFF;
+  font-size: 2rem;
+}
+
+.btn-hamburger {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu-header {
+    display: flex;
+    flex-direction: column;
+    margin: 30% auto;
+    width: 100%;
+  }
+  
+  .menu-header li {
+    color: var(--brown);
+    font-weight: bold;
+    font-size: 2.4rem;
+    letter-spacing: .2rem;
+  }
+
+  .menu-header li span {
+    display: none;
+  }
+
+  .btn-hamburger {
+    position: relative;
+    width: 30px;
+    height: 25px;
+  
+    z-index: 9000;
+  }
+  
+  .btn-hamburguer > div {
+    background-color: var(--brown);
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    transition: all 0.5s linear;
+    margin-top: 3.75rem;
+    margin-right: 1rem;
+  }
+  
+  .btn-hamburguer > div:nth-child(1) {
+    top: 0;
+    right: 0;
+    width: 20px;
+  }
+  .btn-hamburguer > div:nth-child(2) {
+    top: 10px;
+    right: 0;
+  }
+  .btn-hamburguer > div:nth-child(3) {
+    top: 20px;
+    right: 0;
+    width: 20px;
+  }
+  
+  .btn-hamburguer.--is-active > div {
+    background-color: var(--brown);
+    z-index: 9000;
+  }
+  
+  .btn-hamburguer.--is-active > div:nth-child(1) {
+    width: 30px;
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  
+  .btn-hamburguer.--is-active > div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .btn-hamburguer.--is-active > div:nth-child(3) {
+    width: 30px;
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .main-menu {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8500;
+    background-color: var(--green);
+    transition: 0.5s ease-out;
+  }
+  
+  .main-menu.--is-visible {
+    right: 0;
+  }
+  
+  .main-menu__header {
+    height: 70px; 
+    background-color: transparent;
+  }  
 }
